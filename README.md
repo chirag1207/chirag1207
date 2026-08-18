@@ -27,4 +27,4 @@ I’m a passionate Software Engineer from India 🇮🇳 currently based in the 
 
 ### 🚀 Top Repository
 
-[![AS-Project](https://github-readme-stats.vercel.app/api/pin/?username=chirag1207&repo=AS-Project&theme=radical)](https://github.com/chirag1207/AS-Project)
+[![AS-Project](https://github-stats-extended.vercel.app/api/pin/?username=chirag1207&repo=AS-Project&theme=radical)](https://github.com/chirag1207/AS-Project)

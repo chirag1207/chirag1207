@@ -5,9 +5,6 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate Stats Card
+      - name: Generate Main Stats Card
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -24,13 +21,23 @@ jobs:
           plugin_lines: no
           output_action: none
 
-      - name: Move SVG to Workspace
+      - name: Generate Top Repo Card
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: as-project.svg
+          plugin_repositories: yes
+          plugin_repositories_pinned: AS-Project
+          output_action: none
+
+      - name: Move SVGs to Workspace
         run: |
           sudo cp /metrics_renders/github-stats.svg ./github-stats.svg
-          sudo chown $USER:$USER ./github-stats.svg
+          sudo cp /metrics_renders/as-project.svg ./as-project.svg
+          sudo chown $USER:$USER ./github-stats.svg ./as-project.svg
 
-      - name: Commit and Push SVG
+      - name: Commit and Push SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update github stats svg"
-          file_pattern: "github-stats.svg"
+          commit_message: "chore: update github stats and repo svgs"
+          file_pattern: "*.svg"

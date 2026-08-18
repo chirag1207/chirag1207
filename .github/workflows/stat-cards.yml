@@ -15,16 +15,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate Stats Card
-        uses: lowlighter/metrics@latest
+      - name: Generate GitHub Stats Card
+        uses: github-readme-stats/github-readme-stats-action@v1.4.0
         with:
+          username: chirag1207
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: github-stats.svg
-          base: header, activity, community, repositories, metadata
-          plugin_lines: no
-          output_action: none  # Prevents Docker container from trying to commit
+          output-folder: ./
+          show_icons: true
+          theme: radical
 
-      - name: Commit and Push SVG
+      - name: Commit Generated SVG
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update github stats"
+          commit_message: "chore: update github stats card"

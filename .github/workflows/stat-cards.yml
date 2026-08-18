@@ -5,6 +5,9 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,5 +22,15 @@ jobs:
           filename: github-stats.svg
           base: header, activity, community, repositories, metadata
           plugin_lines: no
-          output_action: gist
-          committer_gist: ${{ secrets.GIST_ID }}
+          output_action: none
+
+      - name: Move SVG to Workspace
+        run: |
+          sudo cp /metrics_renders/github-stats.svg ./github-stats.svg
+          sudo chown $USER:$USER ./github-stats.svg
+
+      - name: Commit and Push SVG
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update github stats svg"
+          file_pattern: "github-stats.svg"

@@ -15,16 +15,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate GitHub Stats Card
-        uses: github-readme-stats/github-readme-stats-action@v1.4.0
+      - name: Generate Metrics Card
+        uses: lowlighter/metrics@latest
         with:
-          username: chirag1207
           token: ${{ secrets.METRICS_TOKEN }}
-          output-folder: ./
-          show_icons: true
-          theme: radical
+          filename: github-stats.svg
+          base: header, activity, community, repositories, metadata
+          plugin_lines: no
+          output_action: none
 
-      - name: Commit Generated SVG
+      - name: Commit generated SVG
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update github stats card"
+          commit_message: "chore: update github stats SVG"

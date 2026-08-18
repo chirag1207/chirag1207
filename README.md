@@ -23,8 +23,8 @@ I’m a passionate Software Engineer from India 🇮🇳 currently based in the 
 
 ### 📊 GitHub Stats
 
-[![Chirag's GitHub stats](https://github-readme-stats.vercel.app/api?username=chirag1207\&show_icons=true\&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+[![Chirag's GitHub stats](https://github-readme-stats.vercel.app/api?username=chirag1207&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
 
 ### 🚀 Top Repository
 
-[![AS-Project](https://github-readme-stats.vercel.app/api/pin/?username=chirag1207\&repo=AS-Project\&theme=radical)](https://github.com/chirag1207/AS-Project)
+[![AS-Project](https://github-readme-stats.vercel.app/api/pin/?username=chirag1207&repo=AS-Project&theme=radical)](https://github.com/chirag1207/AS-Project)

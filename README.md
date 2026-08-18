@@ -23,7 +23,7 @@ I’m a passionate Software Engineer from India 🇮🇳 currently based in the 
 
 ### 📊 GitHub Stats
 
-[![Chirag's GitHub stats](./github-stats.svg)](https://github.com/chirag1207)
+![Chirag's GitHub stats](./github-stats.svg)
 
 ### 🚀 Top Repository
 

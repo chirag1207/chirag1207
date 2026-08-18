@@ -20,6 +20,3 @@ jobs:
           base: header, activity, community, repositories, metadata
           plugin_lines: no
           repositories_batch: 20
-          config_padding: 0, 8
-          # Skip browser rendering checks that cause timeouts
-          use_prebuilt_image: yes

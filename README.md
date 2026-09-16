@@ -12,7 +12,7 @@ I’m a passionate Software Engineer from India 🇮🇳 currently based in the 
 
 ### About me
 
-* 💼 Software Engineer at **Ipser Labs**
+* 💼 Software Engineer at **Wisdom Square Technologies**
 * 🚀 MS in Software Engineering from **George Mason University**
 * 💖 I love working with **React**, **Node.js**, and **Spring Boot**
 * 💬 Ask me about **Full-Stack Development** or **Cloud Architecture**
